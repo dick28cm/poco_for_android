@@ -29,3 +29,6 @@ win10安装ubuntu步骤：
     export api=21                   //目标api=21
     export version=1.1.1k           //openssl版本为1.1.1k 
     ./build-android-openssl.sh      //开始编译构建openssl  后面加参数arm64代表之构建arm64
+
+# 3：编译poco     
+    ./build-android-poco.sh         //开始编译构建poco  后面加参数arm64代表之构建arm64
