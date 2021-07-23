@@ -17,7 +17,7 @@
 # # read -n1 -p "Press any key to continue..."
 
 ###############################
-####cmake方式一键编译poco库  目前只支持static静态库
+####cmake方式一键编译protobuf库  目前只支持static静态库
 ####
 ####
 
@@ -80,18 +80,17 @@ function configure_make() {
 
     CMAKE_PATH=$(pwd)/cmake
     CMAKE_PROJECT_PATH=$(pwd)/cmake-$ABI
-    CMAKE_OUT_PATH="$TOOLS_ROOT/../output/android/poco-$ABI"
+    CMAKE_OUT_PATH="$TOOLS_ROOT/../output/android/protobuf-$ABI"
 
     rm -rf $CMAKE_PROJECT_PATH
 
-    echo  cmake ${CMAKE_PATH} -B${CMAKE_PROJECT_PATH} -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_INSTALL_PREFIX=${CMAKE_OUT_PATH} -DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK_ROOT}/build/cmake/android.toolchain.cmake -DANDROID_NATIVE_API_LEVEL=${api} -DANDROID_ABI=${ABI} -DBUILD_SHARED_LIBS=OFF
-    cmake ${CMAKE_PATH} -B${CMAKE_PROJECT_PATH} -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_INSTALL_PREFIX=${CMAKE_OUT_PATH} -DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK_ROOT}/build/cmake/android.toolchain.cmake -DANDROID_NATIVE_API_LEVEL=${api} -DANDROID_ABI=${ABI} -DBUILD_SHARED_LIBS=OFF 
+    echo  cmake ${CMAKE_PATH} -B${CMAKE_PROJECT_PATH} -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_INSTALL_PREFIX=${CMAKE_OUT_PATH} -DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK_ROOT}/build/cmake/android.toolchain.cmake -DANDROID_NATIVE_API_LEVEL=${api} -DANDROID_ABI=${ABI} -DBUILD_SHARED_LIBS=OFF -Dprotobuf_BUILD_TESTS=OFF
+    cmake ${CMAKE_PATH} -B${CMAKE_PROJECT_PATH} -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_INSTALL_PREFIX=${CMAKE_OUT_PATH} -DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK_ROOT}/build/cmake/android.toolchain.cmake -DANDROID_NATIVE_API_LEVEL=${api} -DANDROID_ABI=${ABI} -DBUILD_SHARED_LIBS=OFF -Dprotobuf_BUILD_TESTS=OFF
 
     log_info "make $ABI start..."
 
     cd cmake-$ABI
-    cmake --build . --target libprotobuf install
-    #cmake --build . --target libprotobuf-lite install
+    cmake --build . --target install
 
     cd ../
     rm -rf $CMAKE_PROJECT_PATH
