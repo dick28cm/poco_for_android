@@ -22,7 +22,7 @@ win10安装ubuntu步骤：
       
 # 2：编译openssl     
     下载一键编译openssl的脚本到本地
-    git clone https://github.com/leenjewel/openssl_for_ios_and_android.git
+    git clone https://github.com/dick28cm/poco_for_android.git
     
     进入tools目录。编译之前设置环境变量
     export ANDROID_NDK_ROOT=/mnt/d/dev_env/android-sdk/ndk/android-ndk-r21d
