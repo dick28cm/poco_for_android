@@ -3,8 +3,8 @@
 
 编译环境为ubuntu lts 20.4 
 win10安装ubuntu步骤：  
-   &nbsp;1：打开控制面板->程序->启动或关闭windows功能，然后勾选“适用linux的windows子系统”，等待完毕  
-   &nbsp;2：打开Microsoft Store(win+R后，输入ms-windows-store://home)搜索“ubuntu”安装并且进入ubuntu配置  
+   &nbsp;1：打开控制面板->程序->启动或关闭windows功能，然后勾选“适用linux的windows子系统”，等待完毕（提示需要重启的话，记得重启再进行下一步操作）
+   &nbsp;2：打开Microsoft Store(win+R后，输入ms-windows-store://home)搜索“ubuntu”安装并且进入ubuntu配置（最好修改root密码，以root权限运行）  
 
 准备环境： apt-get install -y wget git curl unzip pkg-config  make cmake  //安装必须的命令    
      wget： 下载工具  
@@ -15,7 +15,9 @@ win10安装ubuntu步骤：
      cmake：c++编译构建工具   
 
 # 1：安装andorid-ndk     
-    设定安装目录为：/mnt/d/dev_env/android-sdk/ndk/ 
+    设定安装目录为：/mnt/d/dev_env/android-sdk/ndk/    
+    //假如你是windows子系统。这个目录就相当于windows的D:\dev_env\android-sdk\ndk目录，在windows内也能访问
+    //目录不存在则使用mkdir创建。cd跳进目录，具体linux命令请百度
     
     wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip    //下载ndk   
     unzip android-ndk-r21d-linux-x86_64.zip                                            //解压zip包   
