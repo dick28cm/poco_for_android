@@ -24,7 +24,11 @@ win10安装ubuntu步骤：
     下载一键编译openssl的脚本到本地
     git clone https://github.com/dick28cm/poco_for_android.git
     
-    进入tools目录。编译之前设置环境变量
+    进入tools目录。
+    cd poco_for_android
+    cd tools
+    
+    编译之前设置环境变量
     export ANDROID_NDK_ROOT=/mnt/d/dev_env/android-sdk/ndk/android-ndk-r21d
     export api=21                   //目标api=21
     export version=1.1.1k           //openssl版本为1.1.1k 
