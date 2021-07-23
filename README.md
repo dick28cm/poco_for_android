@@ -13,3 +13,5 @@ win10安装ubuntu步骤：
     wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip    //下载ndk   
     unzip android-ndk-r21d-linux-x86_64.zip                                            //解压zip包   
       
+# 2：编译openssl     
+    
