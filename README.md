@@ -38,3 +38,8 @@ win10安装ubuntu步骤：
 
 # 3：编译poco     
     ./build-android-poco.sh         //开始编译构建poco  后面加参数arm64代表之构建arm64
+
+# 4：编译protobuf
+    export api=21                   //目标api=21
+    export version=3.17.4           //版本为3.17.4
+    ./build-android-protobuf.sh     //开始编译构建protobuf  后面加参数arm64代表之构建arm64
