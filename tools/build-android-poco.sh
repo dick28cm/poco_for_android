@@ -73,7 +73,7 @@ function configure_cmake() {
     CMAKE_PROJECT_PATH="cmake-$ABI"
     CMAKE_OUT_PATH="$TOOLS_ROOT/../output/android/poco-$ABI"
     OPENSSL_PATH="$TOOLS_ROOT/../output/android/openssl-$ABI"
-    #删除之前的
+    #是否存在openssl
     if [ ! -d ${OPENSSL_PATH} ];then
         log_info "openssl ${OPENSSL_PATH} not exists..."
         exit 1
@@ -93,7 +93,7 @@ function configure_cmake() {
     cmake --build . --target install
 
     cd ../
-    #rm -rf $CMAKE_PROJECT_PATH
+    rm -rf $CMAKE_PROJECT_PATH
     #popd
 }
 
