@@ -10,8 +10,14 @@ win10安装ubuntu步骤：
 
 # 1：安装andorid-ndk     
     设定安装目录为：/mnt/d/dev_env/android-sdk/ndk/ 
+    
     wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip    //下载ndk   
     unzip android-ndk-r21d-linux-x86_64.zip                                            //解压zip包   
       
 # 2：编译openssl     
+    下载一键编译openssl的脚本到本地
+    git clone https://github.com/leenjewel/openssl_for_ios_and_android.git
+    
+    进入tools目录。编译之前设置环境变量
+    export ANDROID_NDK_ROOT=/mnt/d/dev_env/android-sdk/ndk/android-ndk-r21d
     
