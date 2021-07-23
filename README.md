@@ -20,4 +20,6 @@ win10安装ubuntu步骤：
     
     进入tools目录。编译之前设置环境变量
     export ANDROID_NDK_ROOT=/mnt/d/dev_env/android-sdk/ndk/android-ndk-r21d
-    
+    export api=21
+    export version=1.1.1k
+    ./build-android-openssl.sh      //开始编译构建openssl  后面加参数arm64代表之构建arm64
