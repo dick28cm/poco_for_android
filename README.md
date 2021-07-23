@@ -8,8 +8,8 @@ win10安装ubuntu步骤：
 
 准备环境： apt-get install -y wget git curl unzip    //安装必须的命令
 
-# 1：安装andorid-ndk     <br/>
-    设定安装目录为：/mnt/d/dev_env/android-sdk/ndk/ <br/>
-    wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip    //下载ndk   <br/>
-    unzip android-ndk-r21d-linux-x86_64.zip                                            //解压zip包    <br/>
+# 1：安装andorid-ndk     
+    设定安装目录为：/mnt/d/dev_env/android-sdk/ndk/ 
+    wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip    //下载ndk   
+    unzip android-ndk-r21d-linux-x86_64.zip                                            //解压zip包   
       
