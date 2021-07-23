@@ -91,7 +91,7 @@ function configure_make() {
 
     cd cmake-$ABI
     cmake --build . --target libprotobuf install
-    cmake --build . --target libprotobuf-lite install
+    #cmake --build . --target libprotobuf-lite install
 
     cd ../
     rm -rf $CMAKE_PROJECT_PATH
