@@ -6,13 +6,13 @@ win10安装ubuntu步骤：
    &nbsp;1：打开控制面板->程序->启动或关闭windows功能，然后勾选“适用linux的windows子系统”，等待完毕  
    &nbsp;2：打开Microsoft Store(win+R后，输入ms-windows-store://home)搜索“ubuntu”安装并且进入ubuntu配置  
 
-准备环境： apt-get install -y wget git curl unzip pkg-config  make cmake  //安装必须的命令
-    wget： 下载工具
-    git： 同步
-    unzip：解压缩
-    pkg-config：包信息
-    make：GUN构建工具
-    cmake：c++编译构建工具
+准备环境： apt-get install -y wget git curl unzip pkg-config  make cmake  //安装必须的命令    
+     wget： 下载工具  
+     git： 同步  
+     unzip：解压缩   
+     pkg-config：包信息    
+     make：GUN构建工具   
+     cmake：c++编译构建工具   
 
 # 1：安装andorid-ndk     
     设定安装目录为：/mnt/d/dev_env/android-sdk/ndk/ 
